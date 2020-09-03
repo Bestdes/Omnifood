@@ -17,6 +17,17 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
 /* --------------------------------- */
 /* Reusable Components */
 /* --------------------------------- */
@@ -46,6 +57,7 @@ h1 {
   color: #fff;
   font-size: 200%;
   word-spacing: 4px;
+  letter-spacing: 1px;
 }
 
 h2 {
@@ -53,6 +65,7 @@ h2 {
   word-spacing: 2px;
   text-align: center;
   margin-bottom: 30px;
+  letter-spacing: 1px;
 }
 
 h2:after {
@@ -79,11 +92,372 @@ h3 {
   margin-left: 15%;
 }
 
+.box p {
+  font-size: 90%;
+  line-height: 145%;
+}
+
+/* Icons */
+/* --------------------------------- */
+.icon-big {
+  font-size: 350%;
+  display: block;
+  color: #e67e22;
+  padding: 15% 25%;
+}
+
+/* Meal Images */
+/* --------------------------------- */
+.section-meals {
+  padding: 0;
+}
+
+.meal-showcase {
+  list-style: none;
+  width: 100%;
+}
+
+.meal-showcase li {
+  display: block;
+  float: left;
+  width: 25%;
+}
+
+.meal-photo {
+  width: 100%; /* This means that this element has the same width as its parent */
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+.meal-photo img {
+  opacity: 0.7;
+  width: 100%;
+  height: auto;
+  transform: scale(1.2);
+  transition: transform 0.7s, opacity 0.5s;
+}
+
+.meal-photo img:hover {
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+/* How It Works */
+/* --------------------------------- */
+.section-steps {
+  background-color: #f4f4f4;
+}
+
+.steps-box:first-child {
+  text-align: right; /* Works for all inline block elements not just text */
+  padding-right: 3%;
+  margin-top: 30px;
+}
+
+.steps-box:last-child {
+  padding-left: 3%;
+  margin-top: 70px;
+}
+
+.app-screen {
+  width: 40%;
+}
+
+.work-step {
+  margin-bottom: 50px;
+}
+
+.work-step:last-of-type {
+  margin-bottom: 80px;
+}
+
+.work-step div {
+  color: #e67e22;
+  border: 2px solid #e67e22;
+  display: inline-block;
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  padding: 5px;
+  float: left;
+  font-size: 150%;
+  margin-right: 25px;
+}
+
+.btn-app:link,
+.btn-app:visited {
+  border: 0;
+}
+
+.btn-app img {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Currently In These Citites */
+/* --------------------------------- */
+
+.box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.city-feature {
+  margin-bottom: 5px;
+}
+
+.icon-small {
+  width: 38px;
+  display: inline-block;
+  color: #e67e22;
+  text-align: center;
+  font-size: 120%;
+
+  /* Secret to align text and icons */
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -5px;
+  margin-right: 10px;
+}
+/* Testimonials */
+/* --------------------------------- */
+.testimonial {
+  font-style: italic;
+}
+
+.section-test {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(/resources/images/back-customers.jpg);
+  background-size: cover;
+  color: #fff;
+  background-attachment: fixed;
+}
+
+blockquote {
+  padding: 2%;
+  line-height: 145%;
+  position: relative;
+  margin-top: 40px;
+}
+
+blockquote:before {
+  content: "\201C";
+  font-size: 500%;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+
+cite {
+  font-size: 90%;
+  margin-top: 25px;
+  display: block;
+}
+
+cite img {
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Section Plans */
+/* --------------------------------- */
+
+.section-plans {
+  background-color: #f4f4f4;
+}
+
+.plan-box {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 10%;
+  box-shadow: 0 2px 2px rgb(243, 243, 243);
+}
+
+.plan-box div {
+  padding: 15px;
+  border-bottom: 1px solid rgb(250, 245, 245);
+}
+
+.plan-box ul {
+  list-style: none;
+}
+
+.plan-box ul li {
+  padding: 5px 0;
+}
+
+.plan-box div:first-child {
+  background-color: #fcfcfc;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.plan-box div:last-child {
+  text-align: center;
+  border: none;
+}
+
+.plan-price {
+  font-size: 300%;
+  margin-bottom: 10px;
+  font-weight: 300;
+  color: #e67e22;
+}
+
+.plan-price span {
+  font-size: 30%;
+  font-weight: 300;
+}
+
+.price-meal {
+  font-size: 80%;
+}
+
+/* Contact Form */
+/* --------------------------------- */
+
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+select {
+  background-color: rgb(187, 187, 187);
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="checkbox"] {
+  margin-top: 10px;
+}
+
+:focus {
+  outline: none;
+}
+
+/* Footer */
+/* --------------------------------- */
+
+footer {
+  background-color: #333;
+  padding: 40px;
+  font-size: 80%;
+}
+
+footer p {
+  color: #888;
+  text-align: center;
+  font-size: 90%;
+  margin-top: 20px;
+}
+
+.footerNav {
+  list-style: none;
+  float: left;
+}
+
+.footerNav li a:link,
+.footerNav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+  text-decoration: none;
+  border: 0;
+  color: rgb(124, 124, 124);
+  transition: color 0.2s;
+}
+
+.footerNav li a:hover,
+.footerNav li a:active {
+  color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+  font-size: 160%;
+}
+
+.social-links {
+  list-style: none;
+  float: right;
+}
+
+.footerNav li,
+.social-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footerNav li:last-child,
+.social-links li:last-child {
+  margin: 0;
+}
+
+.facebookIcon,
+.twitterIcon,
+.instagramIcon,
+.linkedinIcon {
+  transition: color 0.4s;
+}
+
+.facebookIcon:hover {
+  color: #3b5998;
+}
+
+.twitterIcon:hover {
+  color: #00aced;
+}
+
+.instagramIcon:hover {
+  color: #517fa4;
+}
+
+.linkedinIcon:hover {
+  color: #0e76a8;
+}
+
+/* Generic Links */
+/* --------------------------------- */
+
+a:link,
+a:visited {
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid #e67e22;
+  padding-bottom: 1px;
+  transition: border-bottom 0.4s, color 0.4s;
+}
+
+a:hover,
+a:active {
+  color: #555;
+  border: transparent;
+}
 /* Buttons */
 /* --------------------------------- */
 
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type="submit"] {
   display: inline-block;
   padding: 10px 30px;
   font-weight: 300;
@@ -93,7 +467,8 @@ h3 {
 }
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type="submit"] {
   background-color: #e67e22;
   border: 1px solid #e67e22;
   color: #fff;
@@ -107,7 +482,9 @@ h3 {
 }
 
 .btn:hover,
-.btn:active {
+.btn:active,
+input[type="submit"]:hover,
+input[type="sumbit"]:active {
   background-color: #cf6d17;
   border: 1px solid #cf6d17;
   color: #fff;
@@ -122,6 +499,7 @@ header {
   background-size: cover; /* This make the user see the whole picture instead of only a zoomed in portion */
   background-position: center;
   height: 100vh; /* This makes the image fill the whole viewport (page) */
+  background-attachment: fixed;
 }
 
 .hero-text-box {
